@@ -1,0 +1,120 @@
+*{ /* the * means CSS Reset. This allows the CSS to function correctly across web platforms */
+  box-sizing: border-box; /* allows us to include the padding and border in an elements total width and height */
+  padding: 0; /* padding is used to add space to an elements content inside of a defined border */
+  margin: 0;
+}
+
+.App { /* . means its a class, App is the name of the class */
+  background: #2e2e2e; /* color choice for the component */
+  height: 100vh; /* vh stands for Viewport Height*/
+  width: 100vw; /* vw stands for Viewport Width*/
+  display: flex; /* flex is shorthand and tells the page the order in which to display each component*/
+  align-items: center; /* tells the page how to align the elements for the viewer */
+  justify-content: center; /* Aligns items to the center of the container */
+  
+}
+
+.Header { /* so this is the same piece, it can be called whatever you want... but helps name pieces of code */
+  width: 100%; /* using % here is better because it will fit to whatever screen is used.. if we used px it would be limited to say 100px which varies by device */
+  height: 10%; 
+  background: #67a4d2; /* color of the element */
+  display: flex;
+  align-items: center;
+  padding: 0 5%; /* padding discribes the area around the element and how much 'room' there is. An element with no padding is really small and hard to read. adding space makes it more presentable */
+  position: absolute; /* position absolute allows the element to be locked into a specific area of the page */
+  top: 0px; /* using 0px at the top tells the page to display at the highest margin, perfect for a header on a page */
+}
+
+#home { /* in header.js you can see the 'home' word is being assigned as a div. #home is how you access it in CSS. It can be called whatever you want, but this is the term you will use to style in CSS */
+  color: black; /* font color */
+  font-weight: bold; 
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.Body { /* the . indicates that this is a class. The class is being stored in body.js and we style it in CSS by calling .'name' of the class. It can be called whatever we want, but the terms must match in both places for the code to work. */
+  height: 60%; /* as you can see in the react app display, the body creates a box that is defined by the width and height discribed here. */
+  width: 80%;
+  background: #ffffff;
+  position: relative; /* Position must be input to the child otherwise position relative automatically switches to the parent element. */
+}
+
+#counterBox { /* # tells us that the code will select the element name 'counterBox' from the body.js*/
+  display: flex;
+  justify-content: right; /* aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally).*/
+  width: 100%;
+  height: 10%;
+}
+
+#employeeCounter { /* this is an element */ /* from data.js each employee has a number assigned. in body.js there is a div called employeeCounter. These pieces connect the data and make it all work. */
+  width: 10%;
+  height: 10%;
+  position: Absolute;
+  right: 0px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#empData { /* a div in data.js is called empData and is the parent element. CSS takes in the info for that entire element and applies it to the container */
+  margin-left: 5% /* by using a low percentage, the text will hug the left side of the container */
+
+}
+
+#from { /* this is an element */
+  display: flex;
+
+}
+
+.bold { /* this is a class */
+  font-weight: bold;
+}
+
+#name { /* this is an element */
+  margin-bottom: 3%;
+  text-decoration: underline #67a4d2;
+}
+
+#jobInfo { /* this is an element */
+  margin: 3% 0;
+
+}
+
+#movieList { /* this is an element */
+  margin-left: 5%;
+}
+
+.Footer { /* this is a class */
+  width: 100%;
+  height: 80px;
+  background: #2e2e2e;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#prev {
+  color: white;
+  background: #2e2e2e;
+  border: none;
+  font-size: 20px;
+}
+
+#next {
+  color: white;
+  background: #2e2e2e;
+  border: none;
+  font-size: 20px;
+}
+
+
+.midButton {
+  color: white;
+  background: #67a4d2;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin: 5px;
+}

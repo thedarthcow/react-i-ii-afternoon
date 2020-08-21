@@ -1,4 +1,6 @@
-const data = [ //this is a test
+import React, {Component} from 'react'
+
+const data = [
   {
     id: 1,
     name: { first: "Waylin", last: "Lumsdon" },
@@ -286,4 +288,55 @@ const data = [ //this is a test
   }
 ];
 
-export default data;
+
+export default class Data extends Component {
+    constructor(props) {
+      super(props)
+    }
+    render() {
+      return(
+        
+
+        <div id="empData">  
+
+          
+
+          <div>
+            <h1 id="name">{`${data[this.props.counter].name.first} ${data[this.props.counter].name.last}`}</h1>
+          </div>
+
+          <div id='jobInfo'>
+
+            <div id='from'>
+              
+              <p> <span class="bold"> {`From:`} </span> {`${data[this.props.counter].city}, ${data[this.props.counter].country}`}</p>
+            </div>
+
+            <div id='jobTitle'>
+              
+              <p> <span class="bold"> {`Job Title:`} </span> {`${data[this.props.counter].title}`}</p>
+            </div>
+
+            <div id='employer'>
+              
+              <p> <span class="bold"> {`Employer:`} </span> {`${data[this.props.counter].employer}`}</p>
+            </div>
+
+          </div>
+
+          <div id="movies">
+
+            <p class="bold">Favorite Movies:</p>
+
+            <ol id="movieList">
+              <li>{`${data[this.props.counter].favoriteMovies[0]}`}</li>
+              <li>{`${data[this.props.counter].favoriteMovies[1]}`}</li>
+              <li>{`${data[this.props.counter].favoriteMovies[2]}`}</li>
+            </ol>
+
+          </div>
+
+        </div>
+      )
+    }
+}
